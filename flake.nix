@@ -19,7 +19,7 @@
   };
 
   outputs = inputs: let
-    lib = {
+    lib = inputs.snowfall-lib.mkLib {
       inherit inputs;
       src = ./.;
     };
