@@ -18,10 +18,19 @@
     };
   };
 
-  outputs = inputs:
-    inputs.snowfall-lib.mkFlake {
+  outputs = inputs: let
+    lib = {
       inherit inputs;
-
       src = ./.;
+    };
+  in
+    lib.mkFlake {
+      package-namespace = "creeper-config";
+
+      channels-config.allowUnfree = true;
+
+      systems.modules = with inputs; [
+        home-manager.nixosModules.home-manager
+      ];
     };
 }
