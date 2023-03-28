@@ -3,7 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     ironbar = {
       url = "github:jakestanger/ironbar";
     };
@@ -12,9 +14,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-hardware = {
+      url = "github:nixos/nixos-hardware";
     };
   };
 
@@ -25,7 +32,7 @@
     };
   in
     lib.mkFlake {
-      package-namespace = "creeper-config";
+      package-namespace = "overworld";
 
       channels-config.allowUnfree = true;
 
