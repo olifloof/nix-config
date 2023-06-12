@@ -1,9 +1,8 @@
 {
-  description = "My NixOS / nix-darwin / nixos-generators systems";
+  description = "Overworld";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
-    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     snowfall-lib = {
       url = "github:snowfallorg/lib";
