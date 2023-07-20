@@ -1,9 +1,10 @@
-{ lib, config, ... }:
-
-let
-  cfg = config.snowfall.example;
-in
 {
+  lib,
+  config,
+  ...
+}: let
+  cfg = config.snowfall.example;
+in {
   options.snowfall.example = {
     enable = lib.mkEnableOption "Snowfall Example";
   };
