@@ -14,7 +14,7 @@
     };
 
     snowfall-lib = {
-      url = "github:snowfallorg/lib";
+      url = "github:snowfallorg/lib/feat/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
