@@ -5,9 +5,9 @@
   pkgs,
   ...
 }: let
-  cfg = config.overworld.programs.helix;
+  cfg = config.creeper.programs.helix;
 in {
-  options.overworld.programs.helix = {
+  options.creeper.programs.helix = {
     enable = lib.mkEnableOption "Helix Editor";
   };
 

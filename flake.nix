@@ -1,5 +1,5 @@
 {
-  description = "Overworld";
+  description = "NixOS Configuration";
 
   inputs = {
     nixpkgs = {
@@ -14,7 +14,7 @@
     };
 
     snowfall-lib = {
-      url = "github:snowfallorg/lib/feat/home-manager";
+      url = "github:snowfallorg/lib/dev";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -33,7 +33,7 @@
     };
   in
     lib.mkFlake {
-      package-namespace = "overworld";
+      package-namespace = "creeper";
 
       channels-config.allowUnfree = true;
 
