@@ -1,23 +1,26 @@
 {
   lib,
   config,
-  inputs,
   pkgs,
   ...
 }: let
-  cfg = config.creeper.programs.helix;
+  inherit (lib) mkEnableOption mkIf;
+  cfg = config.creeper.home.helix;
 in {
-  options.creeper.programs.helix = {
-    enable = lib.mkEnableOption "Helix Editor";
+  options.creeper.home.helix = {
+    enable = mkEnableOption "Helix Editor";
   };
 
-  config = lib.mkIf cfg.enable {
+  config = mkIf cfg.enable {
     programs = {
       helix = {
         enable = true;
+        defaultEditor = true;
         settings = {
           theme = "catppuccin_mocha";
           editor = {
+            auto-format = true;
+            auto-save = true;
             bufferline = "multiple";
             color-modes = true;
             completion-trigger-len = 1;
@@ -32,11 +35,14 @@ in {
           };
         };
         languages = {
+          language-server.nil = {
+            command = "${pkgs.nil}/bin/nil";
+          };
           language = [
             {
               name = "nix";
               formatter = {
-                command = "${lib.getExe pkgs.alejandra}";
+                command = "${pkgs.alejandra}/bin/alejandra";
               };
               config.nil.nix.flake.autoEvalInputs = true;
             }
