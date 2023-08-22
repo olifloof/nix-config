@@ -10,7 +10,6 @@ in {
   options.creeper.home.helix = {
     enable = mkEnableOption "Helix Editor";
   };
-
   config = mkIf cfg.enable {
     programs = {
       helix = {
