@@ -5,9 +5,9 @@
   ...
 }: let
   inherit (lib) mkEnableOption mkIf;
-  cfg = config.creeper.home.helix;
+  cfg = config.creeper.home.apps.helix;
 in {
-  options.creeper.home.helix = {
+  options.creeper.home.apps.helix = {
     enable = mkEnableOption "Helix Editor";
   };
   config = mkIf cfg.enable {
