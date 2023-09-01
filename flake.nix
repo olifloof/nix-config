@@ -24,6 +24,13 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+
+    snowflakeos-modules = {
+      url = "github:snowflakelinux/snowflakeos-modules";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 
   outputs = inputs: let
