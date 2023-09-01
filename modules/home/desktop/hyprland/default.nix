@@ -49,7 +49,6 @@ in {
         bind = $mainMod, Q, exec, ${pkgs.wezterm}/bin/wezterm
         bind = $mainMod, C, killactive,
         bind = $mainMod, M, exit,
-        # bind = $mainMod, E, exec, dolphin
         bind = $mainMod, V, togglefloating,
         # bind = $mainMod, R, exec, wofi --show drun
         bind = $mainMod, P, pseudo, # dwindle
