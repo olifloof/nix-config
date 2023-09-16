@@ -383,16 +383,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1692259977,
-        "narHash": "sha256-KZIElNWu0bb4T0axXDSn7aDb96h+6pYUKJWIbZj0E9A=",
+        "lastModified": 1694832968,
+        "narHash": "sha256-9MiTlrEtsVZngGvUG44dc9oL6u7Iy2H/ZQsF7dfZzfI=",
         "owner": "snowfallorg",
         "repo": "lib",
-        "rev": "32b5448e283b9ede9f88b393be31404e33099689",
+        "rev": "83e7839dd1aaa7694b88f50963716dc1bc5de371",
         "type": "github"
       },
       "original": {
         "owner": "snowfallorg",
-        "ref": "dev",
         "repo": "lib",
         "type": "github"
       }

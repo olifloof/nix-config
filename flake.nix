@@ -14,7 +14,7 @@
     };
 
     snowfall-lib = {
-      url = "github:snowfallorg/lib/dev";
+      url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -40,12 +40,8 @@
     };
   in
     lib.mkFlake {
-      package-namespace = "creeper";
+      snowfall.namespace = "creeper";
 
       channels-config.allowUnfree = true;
-
-      systems.modules = with inputs; [
-        home-manager.nixosModules.home-manager
-      ];
     };
 }
